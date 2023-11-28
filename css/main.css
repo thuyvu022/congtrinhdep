@@ -1,0 +1,349 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url("all.css");
+w-100{ width: 100%}
+main{ padding: 50px 0}
+body
+{
+	font-family:'Raleway', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 16px;
+	margin: 0;
+	color: #666
+	
+}
+p{ 
+	line-height: 1.5rem;
+	margin-bottom: 24px;
+	margin-top: 0
+	
+}/* chiều cao mỗi dong la 1 dòng rưỡi*/
+
+h1,h2,h3
+{
+	
+	color: #263A5A
+}
+h4,h5,h6{color: #263A5A}
+
+h1{ font-size: 24px; font-weight: bold; line-height: 2rem}
+.container
+{
+	width: 85%;
+	margin: auto
+}
+
+.bg-chamcham
+{
+	background: url("../images/bg-cham.jpg")
+}
+
+section{ margin-top: 50px; margin-bottom: 20px}
+
+/*---------------------style duong vien, mau, chieu cao --- dung tam---*/
+.vien{ border: 2px solid red}
+.h-500{ height: 500px}
+.h-100{ height: 100px}
+
+
+.icon-header i { margin-left:20px; color:#666}
+
+.footer-menu a
+{
+	display: block; padding: 5px 0;
+	text-decoration: none; color: #333; font-weight: 700; letter-spacing: 0.05rem
+}
+footer h4{ font-size: 1.5rem}
+.footer-menu a:hover{ color: #BFCA02}
+.form-flex{	display: flex}
+.form-control{ padding:10px; border:1px solid #ddd; border-radius: 10px 0 0 10px}
+.btn-primary
+{
+	background-color: #BFCA02;
+	border: 1px solid #ddCA08;
+	border-radius: 0 10px 10px 0;
+	padding: 10px 15px;
+	border-radius: 5px;
+	color: #fff;
+	text-decoration: none
+}
+.btn-primary:hover{
+	background-color:#263A5A;
+	color: #fff;border-radius: 5px;
+	border: 1px solid #363A5A;
+}
+#team .b-nv{	position: relative; overflow: hidden}
+
+ /* box-name: nằm ngang ở chân box mẹ .b-nv*/
+#team .name {
+	position: absolute; left: 0px; bottom: 20px; 
+	background: white; padding: 10px 20px;
+	box-shadow: 0 0 5px #666;
+	transform-origin: left top; /* rời vị trí trục xoay từ giửa ra mép trái trên của nó*/
+	transition: all 0.5s /* cho biến đổi giá trị khác nhau theo 1 thời gian là 1s*/
+}
+/*-- thay dổi trong vòng 1 giây khi user hover vào box mẹ thì box con name sẽ xoay -90 độ và đi lên 10px*/
+#team .b-nv:hover >.name { 
+	left: 10px; transform: rotate(-90deg)
+}
+
+
+#team .chuc-vu { 
+	position: absolute; 
+	bottom: 30px; right: -60px; 
+	transition: all .5s;
+	background: #BFCA02; 
+	color: #fff; padding: 10px;
+	box-shadow: 0 0 5px #666; 
+	opacity: 0
+	}
+
+#team .b-nv:hover >.chuc-vu{  right: 10px; opacity: 1}
+
+#banner, #banner .container
+{
+	position: relative; 
+}
+#banner img{ width: 100%; height: auto}
+
+
+#banner .caption
+{
+	position: absolute;
+	width: 100%; left: 0;
+	height: 100vh;
+	top: 20%;
+	color: #fff
+}
+#banner .caption h1 
+{ 
+	font-size: 5vh;
+	font-weight: bolder;
+	text-shadow: 1px 1px 6px #333;
+
+}
+#banner .text
+{ 
+	padding-left: 5%; position: relative; z-index: 3
+	
+}
+#banner .khung-xanh
+{
+	width: 20%; 
+	height: 45vh;
+	border: 5px solid #BFCA02;
+	position: absolute; top: -20%; left: 0;
+	z-index: 1
+}
+@media (max-width:1200px) /*  nhỏ hơn 992 tablet  ipad---*/
+{
+	#banner .caption
+{
+	
+	top: 10%;
+
+}
+}
+@media (max-width:992px) /*  nhỏ hơn 992 tablet  ipad---*/
+{
+	#banner img {		height: 50vh; width: auto; }
+	#banner .khung-xanh{ 	height: 60vh; width: 10%	}
+}
+@media (max-width:768px) /*--- nhỏ hơn 768 -- phone */
+{
+	#banner img { height: 80vh; width: auto; }
+	#banner .khung-xanh{width: 70%; 	height: 50vh;	}
+}
+
+#kn10 .anh-kn { position: relative;  }
+#kn10 .b-anh{ height: 560px; overflow: hidden}
+#kn10 .anh-kn img{ }
+.bg-dot{ background-image: url("../images/bg-dot.jpg");
+padding: 100px 150px;
+position: absolute;
+left: -250px; top: 30%	;
+z-index: -1;
+opacity: 0.5
+}
+#kn10 .vuong-xanh
+{ position: absolute;left: -50px; top: 25%;
+width: 120px; height: 120px;
+border: 2px solid #BFCA02
+}
+#kn10 .tieude
+{
+	position: absolute;
+	font-size: 100px;
+	width: 200%;
+	color: #00154A; font-weight: 800;
+	top: 30%
+}
+#kn10 .tieude span
+{ 
+	font-size: 24px;
+	position: absolute;
+	font-weight: bolder
+
+}
+
+@media (max-width:992px)
+{
+	.bg-dot{ display: none}
+	
+	#kn10 .vuong-xanh	{ position: absolute;left: 50px; top: 25%;}
+}
+#dichvu { padding-top: 100px}
+
+.tieu-de-phu{ position:relative; display: inline-block; padding: 5px; margin: 10px auto 5px auto; z-index: 4;	text-transform: uppercase; }
+.tieu-de-phu:before
+{
+	content: "";
+	width: 20px; height: 20px;
+	border: 2px solid #BFCA02;
+	position: absolute;
+	top: -10px; left: -10px; z-index: 1;
+
+}
+.hvr-slide{ position: relative; display: inline-block; top: -20px}
+.hvr-slide::before
+{
+	content: "";
+	position: absolute;
+	width: 0px; height: 100% ; background: #BFCA02;
+	left: -10px; bottom: 0;
+	transition: all 1s;
+	
+}
+.hvr-slide:hover::before{
+	width: 110%
+	
+}
+.card-img-top
+{
+	position: relative
+}
+.icon-dichvu{ position: absolute; left: 15px; bottom: -15px; padding: 5px;; background-color: #BFCA02}
+.card-body{
+	padding:  15px
+}
+#logo-doitac img
+{
+	width: 80%; margin: auto; display: block
+}
+
+.box-dan { position: relative;text-align: center; perspective: 400px}
+.box-dan .caption{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	left: 0; top: 0;
+	padding-top: 40%; color: #fff;
+	transform: scale(0) rotateY(-180deg);	
+	transform-style: preserve-3d;
+	transition: all 1s
+}
+.box-dan .caption h2, .c1 h3{ color: #fff}
+.box-dan:hover >.caption
+{
+	transform: scale(1) rotateY(0);
+}
+.box-dan .c1
+{
+	position: absolute; width: 100%;  top: 0%; height: 100%; display: flex;
+	flex-direction: column; justify-content: center; color: #fff
+}
+#du-an .dt-xoay
+{ position: relative; height: 100%; transform-style: preserve-3d; transition: all 1s}
+#du-an .dt-xoay .mat-truoc, #du-an .dt-xoay .mat-sau{
+	position: absolute; width: 100%; height: 100%; left: 0; top: 0; backface-visibility: hidden
+} 
+ #du-an .dt-xoay .mat-sau
+{ 
+	background-color: #412323; color: #fff; text-align: center;display: flex;
+	flex-direction: column; justify-content: center;
+	transform: rotateY(-180deg)
+}
+#du-an .dt-xoay:hover
+{
+	transform: rotateY(180deg)
+}
+#myDiv {
+  display: none;
+  text-align: center;
+}
+.mm-loading
+{
+	position: absolute; left: 45%; top: 10%;
+ width: 200px; height: 200px; border-radius: 5%; border: 4px solid red; z-index: 9999999; 
+	
+	animation-name: x-loading;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate
+}
+@keyframes x-loading
+{
+	0%{ transform: rotate(0) scale(0); opacity: 0}
+	100%{ transform: rotate(360deg) scale(1); opacity:.5}
+	
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #333;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
+
